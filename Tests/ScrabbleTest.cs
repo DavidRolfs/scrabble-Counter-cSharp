@@ -10,14 +10,20 @@ namespace ScrabbleTester
   [Fact]
   public void FindAllLettersInWord_RetrunTotal()
   {
-    Scrabble newScrabble = new Scrabble();
-    Assert.Equal(10, newScrabble.ScoreCounter("Z"));
+    Scrabble newScrabble = new Scrabble("Z");
+    Assert.Equal(10, newScrabble.ScoreCounter());
   }
   [Fact]
   public void TotalPointsOfWord_Retrun12()
   {
-    Scrabble newScrabble = new Scrabble();
-    Assert.Equal(12, newScrabble.ScoreCounter("ZOO"));
+    Scrabble newScrabble = new Scrabble("ZOO");
+    Assert.Equal(12, newScrabble.ScoreCounter());
+  }
+  [Fact]
+  public void EachPossiblePointValue_Retrun33()
+  {
+    Scrabble newScrabble = new Scrabble("ADBFKJZ");
+    Assert.Equal(33, newScrabble.ScoreCounter());
   }
   }
 }
